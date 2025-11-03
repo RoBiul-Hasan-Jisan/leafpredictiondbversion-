@@ -3,133 +3,1359 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard</title>
+  <title>User Dashboard | Plant Health Analytics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      background: #f4f9f9; 
-      padding: 20px; 
+    :root {
+      --primary: #4361ee;
+      --primary-light: #4895ef;
+      --secondary: #3f37c9;
+      --success: #4cc9f0;
+      --danger: #f72585;
+      --warning: #f8961e;
+      --info: #4895ef;
+      --dark: #2b2d42;
+      --light: #f8f9fa;
+      --gray: #adb5bd;
+      --gray-light: #e9ecef;
+      --white: #ffffff;
+      --sidebar-width: 260px;
+      --header-height: 70px;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s ease;
     }
-    .container { 
-      max-width: 700px; 
-      margin: auto; 
-      background: #fff; 
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h2 { text-align: center; margin-bottom: 20px; }
-    input, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; }
-    button { 
-      background: #3498db; 
-      color: #fff; 
-      border: none; 
-      cursor: pointer; 
-      transition: background 0.3s ease;
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
     }
-    button:hover { background: #2980b9; }
-    .prediction { 
-      border: 1px solid #ccc; 
-      padding: 10px; 
-      border-radius: 6px; 
-      margin: 10px 0; 
-      display: flex; 
-      align-items: center; 
+
+    /* Sidebar */
+    .sidebar {
+      width: var(--sidebar-width);
+      background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      transition: var(--transition);
+      z-index: 1000;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar-header {
+      padding: 1.5rem 1.5rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sidebar-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .sidebar-header i {
+      font-size: 1.8rem;
+    }
+
+    .sidebar-menu {
+      padding: 1.5rem 0;
+    }
+
+    .menu-item {
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: var(--transition);
+      border-left: 4px solid transparent;
+    }
+
+    .menu-item:hover, .menu-item.active {
+      background: rgba(255, 255, 255, 0.1);
+      border-left-color: var(--success);
+    }
+
+    .menu-item i {
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      padding: 2rem;
+      transition: var(--transition);
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      background: var(--white);
+      padding: 1.2rem 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .header-title h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .header-title p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .user-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--success));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Stats Cards */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .stat-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .stat-icon.predictions {
+      background: rgba(76, 201, 240, 0.15);
+      color: var(--success);
+    }
+
+    .stat-icon.healthy {
+      background: rgba(56, 193, 114, 0.15);
+      color: #38c172;
+    }
+
+    .stat-icon.diseased {
+      background: rgba(247, 37, 133, 0.15);
+      color: var(--danger);
+    }
+
+    .stat-info h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-info p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* Content Card */
+    .content-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .card-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--gray-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      background: #f8f9fa;
+      gap: 1rem;
     }
-    .prediction img { max-width: 120px; border-radius: 6px; margin-right: 15px; margin-bottom: 10px; }
-    .prediction-info { flex: 1; min-width: 200px; }
-    .logout { 
-      background: #e74c3c; 
-      transition: background 0.3s ease;
+
+    .card-header h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--dark);
     }
-    .logout:hover { background: #c0392b; }
-    #results { margin-top: 15px; font-weight: bold; }
-    @media (max-width: 500px) {
-      .prediction { flex-direction: column; align-items: flex-start; }
-      .prediction img { margin-right: 0; }
+
+    .card-body {
+      padding: 1.5rem 2rem;
+    }
+
+    /* Upload Section */
+    .upload-section {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      border: 2px dashed var(--gray-light);
+      transition: var(--transition);
+    }
+
+    .upload-section:hover {
+      border-color: var(--primary);
+    }
+
+    .upload-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .upload-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      margin-top: 1rem;
+      border: none;
+    }
+
+    .upload-btn:hover {
+      background: var(--secondary);
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    /* Predictions */
+    .predictions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .prediction {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+      border-left: 4px solid transparent;
+    }
+
+    .prediction:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow);
+    }
+
+    .prediction.healthy {
+      border-left-color: #38c172;
+    }
+
+    .prediction.diseased {
+      border-left-color: var(--danger);
+    }
+
+    .prediction.not-leaf {
+      border-left-color: var(--warning);
+    }
+
+    .prediction-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-right: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .prediction-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .prediction-info {
+      flex: 1;
+    }
+
+    .prediction-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .meta-item i {
+      color: var(--primary);
+    }
+
+    .health-badge {
+      padding: 0.4rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .health-badge.healthy {
+      background: rgba(56, 193, 114, 0.15);
+      color: #38c172;
+    }
+
+    .health-badge.diseased {
+      background: rgba(247, 37, 133, 0.15);
+      color: var(--danger);
+    }
+
+    .health-badge.not-leaf {
+      background: rgba(248, 150, 30, 0.15);
+      color: var(--warning);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--gray);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--gray-light);
+      margin-top: 2rem;
+    }
+
+    /* No Data State */
+    .no-data {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--gray);
+    }
+
+    .no-data i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+      
+      .sidebar.active {
+        transform: translateX(0);
+      }
+      
+      .main-content {
+        margin-left: 0;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .prediction {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .prediction-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 200px;
+      }
+      
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .main-content {
+        padding: 1rem;
+      }
+      
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      
+      .user-info {
+        align-self: flex-end;
+      }
+      
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animation for loading */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    /* Overlay for mobile sidebar */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+
+    /* Processing Animation */
+    .processing {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(76, 201, 240, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--success);
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Results Section */
+    .results-section {
+      margin: 1.5rem 0;
+    }
+
+    .result-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--primary);
+    }
+
+    /* Analytics Section */
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .analytics-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .analytics-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Coming Soon Section */
+    .coming-soon {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .coming-soon i {
+      font-size: 4rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .coming-soon h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .coming-soon p {
+      color: var(--gray);
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Page Content */
+    .page-content {
+      display: block;
+    }
+
+    .page-content.hidden {
+      display: none;
+    }
+
+    /* Search and Filter */
+    .search-filter {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.8rem 1rem 0.8rem 2.5rem;
+      border: 1px solid var(--gray-light);
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray);
+    }
+
+    .filter-select {
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--gray-light);
+      border-radius: 6px;
+      background: white;
+      font-size: 0.9rem;
+      min-width: 150px;
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <h2>Welcome, {{ user.email }} 👋</h2>
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <h3>Upload a Leaf Image</h3>
-  <form id="uploadForm" enctype="multipart/form-data">
-    <input type="file" name="image" id="fileInput" accept="image/*" required>
-    <button type="submit">Predict</button>
-  </form>
-
-  <div id="results"></div>
-
-  <h3>Your Predictions</h3>
-  <div id="allPredictions">
-    {% if predictions %}
-      {% for pred in predictions %}
-        <div class="prediction">
-          <img src="{{ url_for('static', filename=pred.image_path) }}" alt="Leaf Image">
-          <div class="prediction-info">
-            <p><strong>Leaf:</strong> {{ pred.leaf }}</p>
-            <p><strong>Health:</strong> {{ pred.health }}</p>
-            <p><strong>Disease:</strong> {{ pred.disease or 'N/A' }}</p>
-            <p><strong>Confidence:</strong> {{ "%.2f"|format(pred.confidence*100) }}%</p>
-            <p><strong>Timestamp:</strong> {{ pred.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</p>
-          </div>
-        </div>
-      {% endfor %}
-    {% else %}
-      <p>No predictions yet.</p>
-    {% endif %}
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <i class="fas fa-leaf"></i>
+      <h2>GreenEye AI</h2>
+    </div>
+    <div class="sidebar-menu">
+      <div class="menu-item active" data-page="dashboard">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </div>
+      <div class="menu-item" data-page="history">
+        <i class="fas fa-history"></i>
+        <span>Prediction History</span>
+      </div>
+      <div class="menu-item" data-page="analytics">
+        <i class="fas fa-chart-bar"></i>
+        <span>Analytics</span>
+      </div>
+      <div class="menu-item" data-page="profile">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </div>
+      
+      <!-- Logout Button -->
+      <div class="menu-item">
+        <a href="{{ url_for('logout') }}" style="display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; width: 100%;">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </div>
   </div>
 
-  <form action="{{ url_for('logout') }}" method="get">
-    <button type="submit" class="logout">Logout</button>
-  </form>
-</div>
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-title">
+          <h1 id="page-title">Welcome, {{ user.email }} 👋</h1>
+          <p id="page-subtitle">Upload leaf images for health analysis</p>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="user-avatar">
+          {{ user.email[0].upper() }}
+        </div>
+        <div>
+          <div><strong>{{ user.email }}</strong></div>
+          <div style="font-size: 0.8rem; color: var(--gray);">User</div>
+        </div>
+      </div>
+    </div>
 
-<script>
-document.getElementById("uploadForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const fileInput = document.getElementById("fileInput");
-  if(fileInput.files.length === 0) return alert("Select an image");
+    <!-- Dashboard Page -->
+    <div class="page-content" id="dashboard-page">
+      <!-- Stats Cards -->
+      <div class="stats-container">
+        <div class="stat-card fade-in">
+          <div class="stat-icon predictions">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="stat-info">
+            <h3 id="total-predictions">0</h3>
+            <p>Total Predictions</p>
+          </div>
+        </div>
+        <div class="stat-card fade-in" style="animation-delay: 0.1s;">
+          <div class="stat-icon healthy">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="stat-info">
+            <h3 id="healthy-plants">0</h3>
+            <p>Healthy Plants</p>
+          </div>
+        </div>
+        <div class="stat-card fade-in" style="animation-delay: 0.2s;">
+          <div class="stat-icon diseased">
+            <i class="fas fa-bug"></i>
+          </div>
+          <div class="stat-info">
+            <h3 id="diseased-plants">0</h3>
+            <p>Diseased Plants</p>
+          </div>
+        </div>
+      </div>
 
-  const formData = new FormData();
-  formData.append("image", fileInput.files[0]);
+      <!-- Upload Section -->
+      <div class="content-card">
+        <div class="card-header">
+          <h3>Upload Leaf Image</h3>
+        </div>
+        <div class="card-body">
+          <div class="upload-section" id="uploadSection">
+            <div class="upload-icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h3>Drag & Drop or Click to Upload</h3>
+            <p>Supported formats: JPG, PNG, JPEG</p>
+            <label for="fileInput" class="upload-btn">
+              <i class="fas fa-upload"></i> Choose Image
+            </label>
+            <input type="file" id="fileInput" class="file-input" accept="image/*">
+          </div>
+          
+          <div id="results" class="results-section"></div>
+          
+          <button id="predictBtn" class="upload-btn" style="width: 100%; display: none;">
+            <i class="fas fa-search"></i> Analyze Image
+          </button>
+        </div>
+      </div>
 
-  const resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = "<p>Processing...</p>";
-
-  try {
-    const response = await fetch("/predict", { method: "POST", body: formData });
-    const data = await response.json();
-
-    if(data.error) {
-      resultsDiv.innerHTML = `<p style="color:red">${data.error}</p>`;
-      return;
-    }
-
-    // Construct prediction card
-    let html = `<div class="prediction">
-                  <img src="${data.image_url}" alt="Leaf Image">
+      <!-- Recent Predictions -->
+      <div class="content-card">
+        <div class="card-header">
+          <h3>Recent Predictions</h3>
+        </div>
+        <div class="card-body">
+          <div class="predictions" id="recentPredictions">
+            {% if predictions %}
+              {% for pred in predictions[:3] %}
+                <div class="prediction {{ 'healthy' if pred.health == 'Healthy' else 'diseased' if pred.health else 'not-leaf' }} fade-in" data-status="{{ 'healthy' if pred.health == 'Healthy' else 'diseased' if pred.health else 'not-leaf' }}">
+                  <div class="prediction-image">
+                    <img src="{{ url_for('static', filename=pred.image_path) }}" alt="Leaf Image">
+                  </div>
                   <div class="prediction-info">
-                    <p><strong>Leaf:</strong> ${data.leaf}</p>
-                    <p><strong>Health:</strong> ${data.health}</p>`;
-    if(data.disease) html += `<p><strong>Disease:</strong> ${data.disease}</p>`;
-    html += `<p><strong>Confidence:</strong> ${data.confidence}%</p>
-             </div></div>`;
+                    <h4>
+                      {{ pred.leaf }}
+                      {% if pred.health %}
+                        <span class="health-badge {{ 'healthy' if pred.health == 'Healthy' else 'diseased' }}">
+                          {{ pred.health }}
+                        </span>
+                      {% else %}
+                        <span class="health-badge not-leaf">Not Leaf</span>
+                      {% endif %}
+                    </h4>
+                    <div class="prediction-meta">
+                      {% if pred.health %}
+                        <div class="meta-item">
+                          <i class="fas fa-bug"></i>
+                          <span>{{ pred.disease or 'No Disease' }}</span>
+                        </div>
+                      {% endif %}
+                      <div class="meta-item">
+                        <i class="fas fa-percentage"></i>
+                        <span>{{ "%.2f"|format(pred.confidence*100) }}% Confidence</span>
+                      </div>
+                      <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ pred.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="no-data">
+                <i class="fas fa-inbox"></i>
+                <h3>No predictions yet</h3>
+                <p>Upload your first leaf image to get started</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
 
-    // Add new prediction on top
-    const allPredsDiv = document.getElementById("allPredictions");
-    allPredsDiv.insertAdjacentHTML('afterbegin', html);
+    <!-- Prediction History Page -->
+    <div class="page-content hidden" id="history-page">
+      <div class="content-card">
+        <div class="card-header">
+          <h3>Your Prediction History</h3>
+          <div class="search-filter">
+            <div class="search-box">
+              <i class="fas fa-search"></i>
+              <input type="text" id="historySearch" placeholder="Search predictions...">
+            </div>
+            <select class="filter-select" id="historyFilter">
+              <option value="all">All Status</option>
+              <option value="healthy">Healthy</option>
+              <option value="diseased">Diseased</option>
+              <option value="not-leaf">Not Leaf</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="predictions" id="allPredictions">
+            {% if predictions %}
+              {% for pred in predictions %}
+                <div class="prediction {{ 'healthy' if pred.health == 'Healthy' else 'diseased' if pred.health else 'not-leaf' }} fade-in" data-status="{{ 'healthy' if pred.health == 'Healthy' else 'diseased' if pred.health else 'not-leaf' }}">
+                  <div class="prediction-image">
+                    <img src="{{ url_for('static', filename=pred.image_path) }}" alt="Leaf Image">
+                  </div>
+                  <div class="prediction-info">
+                    <h4>
+                      {{ pred.leaf }}
+                      {% if pred.health %}
+                        <span class="health-badge {{ 'healthy' if pred.health == 'Healthy' else 'diseased' }}">
+                          {{ pred.health }}
+                        </span>
+                      {% else %}
+                        <span class="health-badge not-leaf">Not Leaf</span>
+                      {% endif %}
+                    </h4>
+                    <div class="prediction-meta">
+                      {% if pred.health %}
+                        <div class="meta-item">
+                          <i class="fas fa-bug"></i>
+                          <span>{{ pred.disease or 'No Disease' }}</span>
+                        </div>
+                      {% endif %}
+                      <div class="meta-item">
+                        <i class="fas fa-percentage"></i>
+                        <span>{{ "%.2f"|format(pred.confidence*100) }}% Confidence</span>
+                      </div>
+                      <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ pred.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="no-data">
+                <i class="fas fa-inbox"></i>
+                <h3>No predictions yet</h3>
+                <p>Upload your first leaf image to get started</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
 
-    resultsDiv.innerHTML = ""; // Clear processing message
-  } catch(err) {
-    console.error(err);
-    resultsDiv.innerHTML = `<p style="color:red">Server error. Try again.</p>`;
-  }
-});
-</script>
+    <!-- Analytics Page -->
+    <div class="page-content hidden" id="analytics-page">
+      <div class="analytics-grid">
+        <div class="analytics-card">
+          <h3><i class="fas fa-chart-pie"></i> Health Distribution</h3>
+          <div id="health-chart">
+            <div style="text-align: center; padding: 2rem;">
+              <div id="pie-chart" style="display: inline-block; width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(#38c172 0% 70%, #f72585 70% 100%); position: relative;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; background: white; border-radius: 50%;"></div>
+              </div>
+              <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div style="width: 15px; height: 15px; background: #38c172; border-radius: 3px;"></div>
+                  <span>Healthy: <span id="healthy-percent">70%</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div style="width: 15px; height: 15px; background: #f72585; border-radius: 3px;"></div>
+                  <span>Diseased: <span id="diseased-percent">30%</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="analytics-card">
+          <h3><i class="fas fa-chart-line"></i> Prediction Trends</h3>
+          <div id="trend-chart">
+            <div style="height: 200px; display: flex; align-items: end; gap: 10px; justify-content: center; margin-top: 2rem;">
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 30px; background: #38c172; height: 120px; border-radius: 4px 4px 0 0;"></div>
+                <span style="margin-top: 5px; font-size: 0.8rem;">Healthy</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 30px; background: #f72585; height: 80px; border-radius: 4px 4px 0 0;"></div>
+                <span style="margin-top: 5px; font-size: 0.8rem;">Diseased</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 30px; background: #f8961e; height: 40px; border-radius: 4px 4px 0 0;"></div>
+                <span style="margin-top: 5px; font-size: 0.8rem;">Not Leaf</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="analytics-card">
+          <h3><i class="fas fa-bug"></i> Top Diseases</h3>
+          <div id="disease-stats">
+            <div style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem;">
+                <span>Powdery Mildew</span>
+                <span style="font-weight: bold;">42%</span>
+              </div>
+              <div style="height: 8px; background: var(--gray-light); border-radius: 4px; overflow: hidden;">
+                <div style="height: 100%; width: 42%; background: var(--danger);"></div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; margin: 1.5rem 0 0.8rem;">
+                <span>Leaf Spot</span>
+                <span style="font-weight: bold;">28%</span>
+              </div>
+              <div style="height: 8px; background: var(--gray-light); border-radius: 4px; overflow: hidden;">
+                <div style="height: 100%; width: 28%; background: var(--warning);"></div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; margin: 1.5rem 0 0.8rem;">
+                <span>Blight</span>
+                <span style="font-weight: bold;">18%</span>
+              </div>
+              <div style="height: 8px; background: var(--gray-light); border-radius: 4px; overflow: hidden;">
+                <div style="height: 100%; width: 18%; background: #9d4edd;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div class="page-content hidden" id="profile-page">
+      <div class="coming-soon">
+        <i class="fas fa-user-cog"></i>
+        <h2>Profile Section</h2>
+        <p>We're working on an amazing profile management system. This feature will be available soon!</p>
+        <div style="margin-top: 2rem;">
+          <div class="upload-btn" style="display: inline-block; margin: 0 0.5rem;">
+            <i class="fas fa-bell"></i> Notify Me
+          </div>
+          <div class="upload-btn" style="display: inline-block; margin: 0 0.5rem; background: var(--gray);">
+            <i class="fas fa-home"></i> Back to Dashboard
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>GreenEye AI User Dashboard &copy; 2025 | All rights reserved</p>
+    </div>
+  </div>
+
+  <script>
+    // Mobile sidebar toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      sidebarOverlay.classList.toggle('active');
+    });
+    
+    sidebarOverlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+    });
+    
+    // Page navigation
+    const menuItems = document.querySelectorAll('.menu-item[data-page]');
+    const pageContents = document.querySelectorAll('.page-content');
+    const pageTitle = document.getElementById('page-title');
+    const pageSubtitle = document.getElementById('page-subtitle');
+    
+    const pageTitles = {
+      'dashboard': 'Welcome, {{ user.email }} 👋',
+      'history': 'Prediction History',
+      'analytics': 'Analytics & Insights',
+      'profile': 'Your Profile'
+    };
+    
+    const pageSubtitles = {
+      'dashboard': 'Upload leaf images for health analysis',
+      'history': 'View your past predictions and results',
+      'analytics': 'Detailed analysis of your plant health data',
+      'profile': 'Manage your account settings and preferences'
+    };
+    
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const page = item.getAttribute('data-page');
+        
+        // Update active menu item
+        menuItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        
+        // Show selected page
+        pageContents.forEach(content => {
+          content.classList.add('hidden');
+        });
+        document.getElementById(`${page}-page`).classList.remove('hidden');
+        
+        // Update page title and subtitle
+        pageTitle.textContent = pageTitles[page];
+        pageSubtitle.textContent = pageSubtitles[page];
+        
+        // Update analytics when switching to analytics page
+        if (page === 'analytics') {
+          updateAnalytics();
+        }
+        
+        // Close sidebar on mobile after selection
+        if (window.innerWidth <= 992) {
+          sidebar.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
+        }
+      });
+    });
+    
+    // File upload handling
+    const fileInput = document.getElementById('fileInput');
+    const uploadSection = document.getElementById('uploadSection');
+    const predictBtn = document.getElementById('predictBtn');
+    const resultsDiv = document.getElementById('results');
+    
+    fileInput.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+        const fileName = this.files[0].name;
+        uploadSection.innerHTML = `
+          <div class="upload-icon">
+            <i class="fas fa-file-image"></i>
+          </div>
+          <h3>${fileName}</h3>
+          <p>Ready for analysis</p>
+        `;
+        predictBtn.style.display = 'block';
+      }
+    });
+    
+    // Drag and drop functionality
+    uploadSection.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadSection.style.borderColor = 'var(--primary)';
+      uploadSection.style.background = 'rgba(67, 97, 238, 0.05)';
+    });
+    
+    uploadSection.addEventListener('dragleave', () => {
+      uploadSection.style.borderColor = 'var(--gray-light)';
+      uploadSection.style.background = 'var(--light)';
+    });
+    
+    uploadSection.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadSection.style.borderColor = 'var(--gray-light)';
+      uploadSection.style.background = 'var(--light)';
+      
+      if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+        fileInput.files = e.dataTransfer.files;
+        const fileName = e.dataTransfer.files[0].name;
+        uploadSection.innerHTML = `
+          <div class="upload-icon">
+            <i class="fas fa-file-image"></i>
+          </div>
+          <h3>${fileName}</h3>
+          <p>Ready for analysis</p>
+        `;
+        predictBtn.style.display = 'block';
+      }
+    });
+    
+    // Prediction functionality
+    predictBtn.addEventListener('click', async () => {
+      if (!fileInput.files.length) return alert("Please select an image first");
+      
+      const formData = new FormData();
+      formData.append("image", fileInput.files[0]);
+      
+      resultsDiv.innerHTML = `
+        <div class="processing">
+          <div class="spinner"></div>
+          <h3>Analyzing Image...</h3>
+          <p>This may take a few moments</p>
+        </div>
+      `;
+      
+      predictBtn.disabled = true;
+      predictBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      
+      try {
+        const response = await fetch("/predict", { method: "POST", body: formData });
+        const data = await response.json();
+        
+        if (data.error) {
+          resultsDiv.innerHTML = `<div class="result-card" style="border-left-color: var(--danger);">
+            <h3 style="color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Error</h3>
+            <p>${data.error}</p>
+          </div>`;
+          return;
+        }
+        
+        // Show results
+        let statusClass = 'healthy';
+        let statusText = 'Healthy';
+        
+        if (data.leaf === 'Not Leaf') {
+          statusClass = 'not-leaf';
+          statusText = 'Not a Leaf';
+        } else if (data.health === 'Unhealthy') {
+          statusClass = 'diseased';
+          statusText = 'Diseased';
+        }
+        
+        resultsDiv.innerHTML = `
+          <div class="result-card" style="border-left-color: ${statusClass === 'healthy' ? '#38c172' : statusClass === 'diseased' ? 'var(--danger)' : 'var(--warning)'};">
+            <h3><i class="fas fa-check-circle" style="color: ${statusClass === 'healthy' ? '#38c172' : statusClass === 'diseased' ? 'var(--danger)' : 'var(--warning)'};"></i> Analysis Complete</h3>
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0;">
+              <img src="${data.image_url}" alt="Analyzed Image" style="width: 100px; height: 100px; border-radius: 8px; object-fit: cover;">
+              <div>
+                <p><strong>Result:</strong> <span class="health-badge ${statusClass}">${statusText}</span></p>
+                ${data.disease ? `<p><strong>Disease:</strong> ${data.disease}</p>` : ''}
+                <p><strong>Confidence:</strong> ${data.confidence}%</p>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        // Add new prediction to history
+        addNewPrediction(data, statusClass);
+        
+        // Update statistics
+        updateStatistics();
+        
+      } catch (err) {
+        console.error(err);
+        resultsDiv.innerHTML = `<div class="result-card" style="border-left-color: var(--danger);">
+          <h3 style="color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Server Error</h3>
+          <p>Please try again later</p>
+        </div>`;
+      } finally {
+        predictBtn.disabled = false;
+        predictBtn.innerHTML = '<i class="fas fa-search"></i> Analyze Image';
+        predictBtn.style.display = 'none';
+        
+        // Reset upload section
+        uploadSection.innerHTML = `
+          <div class="upload-icon">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <h3>Drag & Drop or Click to Upload</h3>
+          <p>Supported formats: JPG, PNG, JPEG</p>
+          <label for="fileInput" class="upload-btn">
+            <i class="fas fa-upload"></i> Choose Image
+          </label>
+        `;
+        fileInput.value = '';
+      }
+    });
+    
+    // Add new prediction to both recent and all predictions
+    function addNewPrediction(data, statusClass) {
+      const now = new Date();
+      const timestamp = now.toLocaleString();
+      
+      const newPredictionHTML = `
+        <div class="prediction ${statusClass} fade-in" data-status="${statusClass}">
+          <div class="prediction-image">
+            <img src="${data.image_url}" alt="Leaf Image">
+          </div>
+          <div class="prediction-info">
+            <h4>
+              ${data.leaf}
+              <span class="health-badge ${statusClass}">${data.health || 'Not Leaf'}</span>
+            </h4>
+            <div class="prediction-meta">
+              ${data.disease ? `
+                <div class="meta-item">
+                  <i class="fas fa-bug"></i>
+                  <span>${data.disease}</span>
+                </div>
+              ` : ''}
+              <div class="meta-item">
+                <i class="fas fa-percentage"></i>
+                <span>${data.confidence}% Confidence</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-clock"></i>
+                <span>${timestamp}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      // Add to recent predictions
+      const recentPredsDiv = document.getElementById('recentPredictions');
+      const noDataRecent = recentPredsDiv.querySelector('.no-data');
+      
+      if (noDataRecent) {
+        recentPredsDiv.innerHTML = newPredictionHTML;
+      } else {
+        // Remove oldest if we have more than 3
+        const recentPreds = recentPredsDiv.querySelectorAll('.prediction');
+        if (recentPreds.length >= 3) {
+          recentPreds[recentPreds.length - 1].remove();
+        }
+        recentPredsDiv.insertAdjacentHTML('afterbegin', newPredictionHTML);
+      }
+      
+      // Add to all predictions
+      const allPredsDiv = document.getElementById('allPredictions');
+      const noDataAll = allPredsDiv.querySelector('.no-data');
+      
+      if (noDataAll) {
+        allPredsDiv.innerHTML = newPredictionHTML;
+      } else {
+        allPredsDiv.insertAdjacentHTML('afterbegin', newPredictionHTML);
+      }
+    }
+    
+    // Calculate and update statistics
+    function updateStatistics() {
+      const predictions = document.querySelectorAll('.prediction');
+      const totalPredictions = predictions.length;
+      
+      let healthyCount = 0;
+      let diseasedCount = 0;
+      
+      predictions.forEach(prediction => {
+        const status = prediction.getAttribute('data-status');
+        if (status === 'healthy') {
+          healthyCount++;
+        } else if (status === 'diseased') {
+          diseasedCount++;
+        }
+      });
+      
+      document.getElementById('total-predictions').textContent = totalPredictions;
+      document.getElementById('healthy-plants').textContent = healthyCount;
+      document.getElementById('diseased-plants').textContent = diseasedCount;
+      
+      // Update analytics if needed
+      updateAnalytics();
+    }
+    
+    // Update analytics charts
+    function updateAnalytics() {
+      const predictions = document.querySelectorAll('.prediction');
+      const totalPredictions = predictions.length;
+      
+      if (totalPredictions === 0) return;
+      
+      let healthyCount = 0;
+      let diseasedCount = 0;
+      let notLeafCount = 0;
+      
+      predictions.forEach(prediction => {
+        const status = prediction.getAttribute('data-status');
+        if (status === 'healthy') {
+          healthyCount++;
+        } else if (status === 'diseased') {
+          diseasedCount++;
+        } else if (status === 'not-leaf') {
+          notLeafCount++;
+        }
+      });
+      
+      // Update pie chart
+      const healthyPercent = Math.round((healthyCount / totalPredictions) * 100);
+      const diseasedPercent = Math.round((diseasedCount / totalPredictions) * 100);
+      const notLeafPercent = Math.round((notLeafCount / totalPredictions) * 100);
+      
+      document.getElementById('healthy-percent').textContent = `${healthyPercent}%`;
+      document.getElementById('diseased-percent').textContent = `${diseasedPercent}%`;
+      
+      const pieChart = document.getElementById('pie-chart');
+      if (pieChart) {
+        pieChart.style.background = `conic-gradient(
+          #38c172 0% ${healthyPercent}%,
+          #f72585 ${healthyPercent}% ${healthyPercent + diseasedPercent}%,
+          #f8961e ${healthyPercent + diseasedPercent}% 100%
+        )`;
+      }
+    }
+    
+    // Search and filter for history page
+    function setupHistorySearch() {
+      const searchInput = document.getElementById('historySearch');
+      const statusFilter = document.getElementById('historyFilter');
+      
+      function filterPredictions() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const statusValue = statusFilter.value;
+        
+        const predictions = document.querySelectorAll('#allPredictions .prediction');
+        
+        predictions.forEach(prediction => {
+          const predictionText = prediction.textContent.toLowerCase();
+          const predictionStatus = prediction.getAttribute('data-status');
+          
+          const matchesSearch = searchTerm === '' || predictionText.includes(searchTerm);
+          const matchesStatus = statusValue === 'all' || predictionStatus === statusValue;
+          
+          if (matchesSearch && matchesStatus) {
+            prediction.style.display = 'flex';
+          } else {
+            prediction.style.display = 'none';
+          }
+        });
+      }
+      
+      searchInput.addEventListener('input', filterPredictions);
+      statusFilter.addEventListener('change', filterPredictions);
+    }
+    
+    // Initialize everything on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateStatistics();
+      setupHistorySearch();
+      
+      // Add animation to elements when they come into view
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        fadeInObserver.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,745 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:23:50] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:23:50] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:23:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:23:58] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:06] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:07] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:07] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:07] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:07] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:10] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:10] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:10] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:10] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:10] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:11] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "GET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "GET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "GET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "GET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:26] "GET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:50] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2025 23:24:51] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:16] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:16] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:20] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:25:21] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:19] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:20] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:21] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:28] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:29] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:31] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:27:55] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:31:41] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:26] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:32:43] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:42:39] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:43:05] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:43:08] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:14] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:16] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:19] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:44:22] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:54] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:46:55] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:48:09] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:22] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:23] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:27] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:52:30] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "GET /admin_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/4a395432-0ade-4e62-9ce1-aefe123ae2cc_IMG_1136.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/95fe1fd8-5b7f-499b-ad0c-dc65f5ee86ca_IMG_1140.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/f0d4a522-5962-4ef4-80db-7cda7e69d4e5_IMG_1127.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/8ac2e62a-7eaf-4c38-8895-e5319e5606cc_IMG_1158.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/4624cd3d-b97e-489c-9f6a-59da4b534d21_IMG_1141.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/12384760-0ca3-4281-8029-c024be7aec3b_0e7f0484-16eb-4183-b702-0a5b4f94d015___RS_LB%204000.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/4d4a9244-aaa9-4e87-9184-b5f99edbc01f_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/86562f6b-133b-4e96-bd4e-77e36517f30c_Leaf%20Blight00002_flipped_908.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/793d98a3-f843-42df-9c74-726c17aa2735_Black_Spot%20(4).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/427de489-a46f-4964-8682-f73928c589e7_download%20(6).jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/b1f4cfb0-d306-4d21-a73f-a105d08a441a_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/f967167a-c266-4ed9-94a4-ed45e8d99368_IMG_1128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/506d4887-a655-43f3-8e2f-26613f06fadc_IMG_1129.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:08] "[36mGET /static/uploads/22b7cabf-8d4c-4c39-bccd-266d58f278b4_5fbda72a-a8f7-4ac9-a1d9-6c8d2e316297___RS_HL%207747.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:14] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:17] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:17] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:17] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:17] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:17] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:33] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:57:33] "GET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:47] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [03/Nov/2025 23:58:50] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:05:49] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:05:49] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:05:49] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:05:49] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:05:49] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:05:49] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:19] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:21] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:37] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:37] "GET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:06:51] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:00] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:00] "GET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:32] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:07:58] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:08] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:08] "GET /static/uploads/4397eca3-524e-4468-ae4e-78df3d3a4a96_2023_08_20_14_57_IMG_4386.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:08:10] "[36mGET /static/uploads/4397eca3-524e-4468-ae4e-78df3d3a4a96_2023_08_20_14_57_IMG_4386.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/4397eca3-524e-4468-ae4e-78df3d3a4a96_2023_08_20_14_57_IMG_4386.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:09:54] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:10:00] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:10:00] "GET /static/uploads/a10989ca-dd33-4658-ae03-18733b166e06_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/4397eca3-524e-4468-ae4e-78df3d3a4a96_2023_08_20_14_57_IMG_4386.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:00] "[36mGET /static/uploads/a10989ca-dd33-4658-ae03-18733b166e06_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:39] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/4397eca3-524e-4468-ae4e-78df3d3a4a96_2023_08_20_14_57_IMG_4386.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:13:40] "[36mGET /static/uploads/a10989ca-dd33-4658-ae03-18733b166e06_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "GET /user_dashboard HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/4f1bac79-6431-4db2-bd4b-597824acbd66_00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S%208368.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/71e07c90-5158-4de3-af82-001b88951dfd_0ab271a7-765e-4675-8bfc-e249c0c86fdd___Keller.St_CG%201778.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/76c41adf-6961-4cd3-9f3a-7794329a09b6_0b2bdc8e-90fd-4bb4-bedb-485502fe8a96___RS_LB%204906.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/d539f849-ba07-407d-b480-dd933809698a_0e068694-63b7-4edf-a93d-f2e9f28efaa6___RS_LB%203923.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/75edc111-033a-4a84-9753-5e8464779785_6a2b2664-0e91-455c-8978-64c097631604___RS_HL%207808.JPG HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/0c973cb8-9ab0-48fe-b7e8-09389bae2b45_Dry%20Leaf00010_flipped_424.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/b6ad184b-f5cc-4162-9382-a219de775701_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/4397eca3-524e-4468-ae4e-78df3d3a4a96_2023_08_20_14_57_IMG_4386.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.114 - - [04/Nov/2025 00:14:38] "[36mGET /static/uploads/a10989ca-dd33-4658-ae03-18733b166e06_2023_08_20_14_57_IMG_4373.jpg HTTP/1.1[0m" 304 -
