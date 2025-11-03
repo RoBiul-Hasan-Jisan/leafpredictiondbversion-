@@ -5,6 +5,7 @@ torchaudio
 numpy
 Pillow
 opencv-python
+psycopg2-binary
 
 flask
 torch
