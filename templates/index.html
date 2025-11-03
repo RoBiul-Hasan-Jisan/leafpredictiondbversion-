@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaf Health Detector 🌿</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .upload-section {
+            margin: 20px 0;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .preview-img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        .results-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .not-leaf {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Leaf Health Detector</h1>
+    <p>Upload a leaf image to detect its health and specific disease.</p>
+
+    <!-- IMAGE UPLOAD -->
+    <div class="upload-section">
+        <input type="file" id="fileInput" accept="image/*">
+        <br>
+        <button onclick="uploadImage()">Predict</button>
+    </div>
+
+    <!-- IMAGE PREVIEW -->
+    <div id="imagePreview"></div>
+
+    <!-- RESULTS -->
+    <div id="results" class="results-section"></div>
+</div>
+
+<script>
+function uploadImage() {
+    let fileInput = document.getElementById("fileInput");
+    if(fileInput.files.length === 0){
+        alert("Please select an image");
+        return;
+    }
+
+    let formData = new FormData();
+    formData.append("image", fileInput.files[0]);
+
+    let results = document.getElementById("results");
+    results.innerHTML = `<p>Processing...</p>`;
+
+    fetch("/predict", {method:"POST", body: formData})
+        .then(response => response.json())
+        .then(data => {
+            let imgPreview = document.getElementById("imagePreview");
+            imgPreview.innerHTML = `<img src="${URL.createObjectURL(fileInput.files[0])}" class="preview-img">`;
+
+            results.innerHTML = "";
+
+            if(data.leaf === "Not Leaf"){
+                results.innerHTML = "<h3 class='not-leaf'>🚫 This is not a leaf.</h3>";
+                return;
+            }
+
+            // Show Health
+            results.innerHTML += `<h3>Health: <span class="health">${data.health}</span> (Confidence: ${data.confidence.toFixed(2)}%)</h3>`;
+
+            // Show Specific Disease if exists
+            if(data.disease){
+                results.innerHTML += `<h4>Detected Disease: ${data.disease}</h4>`;
+            }
+        })
+        .catch(err => {
+            results.innerHTML = "<p style='color:red'>Error occurred while predicting.</p>";
+            console.error(err);
+        });
+}
+</script>
+</body>
+</html>

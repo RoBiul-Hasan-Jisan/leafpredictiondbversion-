@@ -1,0 +1,15 @@
+# Ignore dataset folders
+Data/
+Data__Split/
+leaf_detector_dataset/
+Data_Split_Stage2/
+Data/Anthracnose/
+# Ignore dataset zip files
+Data__Split.zip
+leaf_detector_dataset.zip
+Data_Split_Stage2.zip
+
+
+notebook/checkpoint.pth
+notebook/class_names.txt
+notebook/stage2_checkpoint.pth

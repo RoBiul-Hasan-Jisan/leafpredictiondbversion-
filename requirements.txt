@@ -1,0 +1,13 @@
+streamlit
+torch
+torchvision
+torchaudio
+numpy
+Pillow
+opencv-python
+
+flask
+torch
+torchvision
+pillow
+gunicorn
